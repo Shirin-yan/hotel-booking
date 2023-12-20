@@ -41,4 +41,20 @@ struct Booking: Codable {
         case fuelCharge = "fuel_charge"
         case serviceCharge = "service_charge"
     }
+    
+    static let example = Booking(id: 1, 
+                                 hotelName: "Лучший пятизвездочный отель в Хургаде, Египет",
+                                 hotelAddress: "Madinat Makadi, Safaga Road, Makadi Bay, Египет",
+                                 rating: 5,
+                                 ratingName: "Превосходно",
+                                 departure: "Москва",
+                                 arrival: "Египет, Хургада",
+                                 tourStartDate: "19.09.2023",
+                                 tourStopDate: "27.09.2023",
+                                 nights: 7,
+                                 roomName: "Люкс номер с видом на море",
+                                 nutrition: "Все включено",
+                                 tourPrice: 289400,
+                                 fuelCharge: 9300,
+                                 serviceCharge: 2150)
 }
