@@ -23,6 +23,8 @@
 		C0B4256F2B334FF300359DA4 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B4256E2B334FF300359DA4 /* Repository.swift */; };
 		C0B425712B33671800359DA4 /* CoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B425702B33671800359DA4 /* CoordinatorView.swift */; };
 		C0B425732B33674600359DA4 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B425722B33674600359DA4 /* Coordinator.swift */; };
+		C0B425772B336A5F00359DA4 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B425762B336A5F00359DA4 /* Endpoint.swift */; };
+		C0B425792B336B2F00359DA4 /* NetworkManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B425782B336B2F00359DA4 /* NetworkManger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,8 @@
 		C0B4256E2B334FF300359DA4 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		C0B425702B33671800359DA4 /* CoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorView.swift; sourceTree = "<group>"; };
 		C0B425722B33674600359DA4 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		C0B425762B336A5F00359DA4 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		C0B425782B336B2F00359DA4 /* NetworkManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,8 +80,9 @@
 			isa = PBXGroup;
 			children = (
 				C0B425462B32C14E00359DA4 /* tourBookingApp.swift */,
-				C0B425582B334B8800359DA4 /* Components */,
+				C0B425752B336A5000359DA4 /* Network */,
 				C0B425572B334B7600359DA4 /* Repository */,
+				C0B425582B334B8800359DA4 /* Components */,
 				C0B425742B33690300359DA4 /* Coordinator */,
 				C0B425562B334B7000359DA4 /* Model */,
 				C0B425542B334B5E00359DA4 /* View */,
@@ -149,6 +154,15 @@
 				C0B425702B33671800359DA4 /* CoordinatorView.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		C0B425752B336A5000359DA4 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				C0B425762B336A5F00359DA4 /* Endpoint.swift */,
+				C0B425782B336B2F00359DA4 /* NetworkManger.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,6 +239,7 @@
 				C0B4256D2B334EA200359DA4 /* Booking.swift in Sources */,
 				C0B425622B334BED00359DA4 /* HotelVM.swift in Sources */,
 				C0B4256F2B334FF300359DA4 /* Repository.swift in Sources */,
+				C0B425772B336A5F00359DA4 /* Endpoint.swift in Sources */,
 				C0B425602B334BDB00359DA4 /* PaymentView.swift in Sources */,
 				C0B4255C2B334BB900359DA4 /* RoomView.swift in Sources */,
 				C0B425732B33674600359DA4 /* Coordinator.swift in Sources */,
@@ -234,6 +249,7 @@
 				C0B425712B33671800359DA4 /* CoordinatorView.swift in Sources */,
 				C0B4255E2B334BC800359DA4 /* BookingView.swift in Sources */,
 				C0B425652B334C1000359DA4 /* RoomVM.swift in Sources */,
+				C0B425792B336B2F00359DA4 /* NetworkManger.swift in Sources */,
 				C0B4256B2B334DEF00359DA4 /* Room.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
