@@ -8,8 +8,24 @@
 import SwiftUI
 
 struct SliderView: View {
+    @State var index = 0
+    var data: [String] = Hotel.example.imageUrls
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        TabView(selection : $index){
+            ForEach(data, id: \.self) { i in
+                AsyncImage(url: URL(string: i)) { image in
+                    image
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                } placeholder: {
+                    Color.gray
+                }
+            }
+        }.tabViewStyle(PageTabViewStyle())
+            .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .interactive))
+            .aspectRatio(1.3, contentMode: .fit)
+            .cornerRadius(10)
     }
 }
 

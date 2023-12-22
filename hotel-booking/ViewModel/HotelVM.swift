@@ -8,5 +8,5 @@
 import Foundation
 
 class HotelVM: ObservableObject {
-    
+    @Published var data = Hotel.example
 }
