@@ -40,6 +40,8 @@
 		C0B425982B36994000359DA4 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B425972B36994000359DA4 /* RatingView.swift */; };
 		C0B4259A2B369B0C00359DA4 /* PaymentInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B425992B369B0C00359DA4 /* PaymentInfoView.swift */; };
 		C0B4259C2B36A1B700359DA4 /* AddTouristView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B4259B2B36A1B700359DA4 /* AddTouristView.swift */; };
+		C0B4259E2B36B66400359DA4 /* TouristInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B4259D2B36B66400359DA4 /* TouristInfoView.swift */; };
+		C0B425A02B36C13000359DA4 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B4259F2B36C13000359DA4 /* TextFieldView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +80,8 @@
 		C0B425972B36994000359DA4 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		C0B425992B369B0C00359DA4 /* PaymentInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentInfoView.swift; sourceTree = "<group>"; };
 		C0B4259B2B36A1B700359DA4 /* AddTouristView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTouristView.swift; sourceTree = "<group>"; };
+		C0B4259D2B36B66400359DA4 /* TouristInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouristInfoView.swift; sourceTree = "<group>"; };
+		C0B4259F2B36C13000359DA4 /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +192,8 @@
 				C0B425952B3698BA00359DA4 /* BookingInfoView.swift */,
 				C0B425992B369B0C00359DA4 /* PaymentInfoView.swift */,
 				C0B4259B2B36A1B700359DA4 /* AddTouristView.swift */,
+				C0B4259D2B36B66400359DA4 /* TouristInfoView.swift */,
+				C0B4259F2B36C13000359DA4 /* TextFieldView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -296,6 +302,7 @@
 				C0B425692B334C6E00359DA4 /* Hotel.swift in Sources */,
 				C0B4257C2B34060300359DA4 /* HotelView.swift in Sources */,
 				C0B4258E2B34BB7D00359DA4 /* HotelInfo.swift in Sources */,
+				C0B425A02B36C13000359DA4 /* TextFieldView.swift in Sources */,
 				C0B4256D2B334EA200359DA4 /* Booking.swift in Sources */,
 				C0B425872B340ABB00359DA4 /* SliderView.swift in Sources */,
 				C0B4259A2B369B0C00359DA4 /* PaymentInfoView.swift in Sources */,
@@ -310,6 +317,7 @@
 				C0B425962B3698BA00359DA4 /* BookingInfoView.swift in Sources */,
 				C0B425732B33674600359DA4 /* Coordinator.swift in Sources */,
 				C0B425672B334C1E00359DA4 /* BookingVM.swift in Sources */,
+				C0B4259E2B36B66400359DA4 /* TouristInfoView.swift in Sources */,
 				C0B4259C2B36A1B700359DA4 /* AddTouristView.swift in Sources */,
 				C0B425472B32C14E00359DA4 /* tourBookingApp.swift in Sources */,
 				C0B4258B2B34A8DE00359DA4 /* Color.swift in Sources */,

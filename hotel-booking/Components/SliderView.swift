@@ -13,14 +13,14 @@ struct SliderView: View {
     
     var body: some View {
         TabView(selection : $index){
-            ForEach(data, id: \.self) { i in
+            ForEach(data.enumeratedArray(), id: \.offset) { ind, i in
                 AsyncImage(url: URL(string: i)) { image in
                     image
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                 } placeholder: {
                     Color.gray
-                }
+                }.tag(ind)
             }
         }.tabViewStyle(PageTabViewStyle())
             .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .interactive))

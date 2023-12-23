@@ -13,6 +13,7 @@ extension Font {
     static let med_16: Font = .custom("SFProDisplay-Medium", size: 16)
     static let med_14: Font = .custom("SFProDisplay-Medium", size: 14)
     
+    static let reg_12: Font = .custom("SFProDisplay-Regular", size: 12)
     static let reg_16: Font = .custom("SFProDisplay-Regular", size: 16)
     
     static let sbold_30: Font = .custom("SFProDisplay-SemiBold", size: 30)
