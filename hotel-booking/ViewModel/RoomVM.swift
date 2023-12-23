@@ -8,5 +8,5 @@
 import Foundation
 
 class RoomVM: ObservableObject {
-    
+    @Published var data: [Room] = Room.examples
 }
