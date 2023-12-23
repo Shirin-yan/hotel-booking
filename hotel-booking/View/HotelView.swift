@@ -75,7 +75,7 @@ struct HotelView: View {
 
                     HotelInfoItemView(data: .excluded)
                 }.background(Color.customWhite)
-                    .cornerRadius(15)
+                    .cornerRadius(12)
                 
             }.padding(.vertical, 16)
                 .padding(.horizontal, 20)

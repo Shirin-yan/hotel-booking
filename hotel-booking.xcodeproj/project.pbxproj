@@ -39,6 +39,7 @@
 		C0B425962B3698BA00359DA4 /* BookingInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B425952B3698BA00359DA4 /* BookingInfoView.swift */; };
 		C0B425982B36994000359DA4 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B425972B36994000359DA4 /* RatingView.swift */; };
 		C0B4259A2B369B0C00359DA4 /* PaymentInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B425992B369B0C00359DA4 /* PaymentInfoView.swift */; };
+		C0B4259C2B36A1B700359DA4 /* AddTouristView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B4259B2B36A1B700359DA4 /* AddTouristView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +77,7 @@
 		C0B425952B3698BA00359DA4 /* BookingInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingInfoView.swift; sourceTree = "<group>"; };
 		C0B425972B36994000359DA4 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		C0B425992B369B0C00359DA4 /* PaymentInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentInfoView.swift; sourceTree = "<group>"; };
+		C0B4259B2B36A1B700359DA4 /* AddTouristView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTouristView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +187,7 @@
 				C0B425932B36949900359DA4 /* BookingInfoItemView.swift */,
 				C0B425952B3698BA00359DA4 /* BookingInfoView.swift */,
 				C0B425992B369B0C00359DA4 /* PaymentInfoView.swift */,
+				C0B4259B2B36A1B700359DA4 /* AddTouristView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 				C0B425962B3698BA00359DA4 /* BookingInfoView.swift in Sources */,
 				C0B425732B33674600359DA4 /* Coordinator.swift in Sources */,
 				C0B425672B334C1E00359DA4 /* BookingVM.swift in Sources */,
+				C0B4259C2B36A1B700359DA4 /* AddTouristView.swift in Sources */,
 				C0B425472B32C14E00359DA4 /* tourBookingApp.swift in Sources */,
 				C0B4258B2B34A8DE00359DA4 /* Color.swift in Sources */,
 				C0B425712B33671800359DA4 /* CoordinatorView.swift in Sources */,

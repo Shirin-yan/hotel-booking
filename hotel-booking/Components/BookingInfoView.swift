@@ -25,9 +25,10 @@ struct BookingInfoView: View {
             BookingInfoItemView(title: "Номер", value: data.roomName)
             
             BookingInfoItemView(title: "Питание", value: data.nutrition)
+            
         }.padding(.vertical, 8)
             .background(Color.white)
-            .cornerRadius(15)
+            .cornerRadius(12)
     }
 }
 

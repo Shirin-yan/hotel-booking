@@ -12,18 +12,15 @@ struct RoomItemView: View {
     var data: Room
     
     var body: some View {
-        VStack {
+        VStack(spacing: 8) {
             SliderView(data: data.imageUrls)
-                .padding(.horizontal, 20)
-                .padding(.bottom, 8)
         
             Text(data.name)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .foregroundStyle(Color.black)
                 .font(.med_22)
-                .padding(.horizontal, 20)
             
-            HStack(spacing: 3) {
+            HStack(spacing: 4) {
                 Text("Подробнее о номере")
                     .font(.med_16)
                     .frame(alignment: .leading)
@@ -31,12 +28,13 @@ struct RoomItemView: View {
                 
                 Image(systemName: "chevron.right")
                     .foregroundColor(.customBlue)
+                    .imageScale(.small)
             }.padding(.horizontal, 10)
-                .padding(.vertical, 5)
+                .padding(.vertical, 6)
                 .background(Color.customBlue.opacity(0.1))
                 .cornerRadius(5)
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.horizontal, 20)
+                .padding(.bottom, 8)
             
             Group {
                 Text("от \(data.price) ₽ ")
@@ -46,9 +44,9 @@ struct RoomItemView: View {
                 Text(data.priceFor)
                     .font(.reg_16)
                     .foregroundColor(Color.customLightGray)
-            }.padding(.horizontal, 20)
-                .frame(maxWidth: .infinity, alignment: .leading)
-            
+            }.frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.bottom, 8)
+
             Button {
                 coordinator.navigateTo(.booking)
             } label: {
@@ -58,8 +56,8 @@ struct RoomItemView: View {
                     .font(.med_16)
                     .background(Color.customBlue)
                     .cornerRadius(15)
-            }.padding(.horizontal, 20)
-        }.padding(.vertical, 16)
+            }
+        }.padding(16)
             .background(Color.white)
             .cornerRadius(12)
             .padding(.bottom, 8)

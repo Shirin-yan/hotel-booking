@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct BookingInfoItemView: View {
-    var title: String
-    var value: String
+    let title: String
+    let value: String
+    var valueAlignment: Alignment = .leading
+    var valueColor = Color.black
     
     var body: some View {
         HStack(alignment: .top) {
@@ -20,9 +22,9 @@ struct BookingInfoItemView: View {
                 .multilineTextAlignment(.leading)
             
             Text(value)
-                .foregroundColor(.black)
-                .font(.reg_16)
-                .frame(maxWidth: .infinity, alignment: .leading)
+                .foregroundColor(valueColor)
+                .font(valueColor == .black ? .reg_16 : .sbold_16)
+                .frame(maxWidth: .infinity, alignment: valueAlignment)
                 .multilineTextAlignment(.leading)
         }.padding(.horizontal, 16)
             .padding(.vertical, 8)

@@ -27,11 +27,19 @@ struct BookingView: View {
             }.padding(.horizontal, 20)
                 .padding(.vertical, 16)
                 .background(Color.white)
-                .cornerRadius(15)
+                .cornerRadius(12)
             
             BookingInfoView(data: vm.data)
             
+            Button {
+                
+            } label: {
+                AddTouristView()
+            }
             
+            PaymentInfoView(data: vm.data)
+            
+            Spacer(minLength: 10)
         }.navigationTitle("Бронирование")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
@@ -42,6 +50,7 @@ struct BookingView: View {
                         .font(.med_16)
                         .background(Color.customBlue)
                         .cornerRadius(15)
+                        .padding(.top, 12)
                         .onTapGesture {
                             coordinator.navigateTo(.payment)
                         }
