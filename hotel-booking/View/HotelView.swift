@@ -15,32 +15,17 @@ struct HotelView: View {
         ScrollView {
             LazyVStack(alignment: .leading, spacing: 8) {
                     SliderView(data: vm.data.imageUrls)
-                        .padding(.horizontal, 20)
                         .padding(.bottom, 8)
                 
-                    HStack(spacing: 2) {
-                        Image(systemName: "star.fill")
-                            .imageScale(.small)
-                            .foregroundColor(.customOrange)
-                        
-                        Text("\(vm.data.rating) " + vm.data.ratingName)
-                            .font(.med_16)
-                            .foregroundColor(Color.customOrange)
-                    }.padding(.horizontal, 10)
-                        .padding(.vertical, 6)
-                        .background(Color.customOrange.opacity(0.2))
-                        .cornerRadius(5)
-                        .padding(.horizontal, 20)
-
+                RatingView(rating: vm.data.rating, ratingName: vm.data.ratingName)
+                
                     Text(vm.data.name)
                         .font(.med_22)
                         .foregroundStyle(Color.black)
-                        .padding(.horizontal, 20)
 
                     Text(vm.data.address)
                         .font(.med_14)
                         .foregroundColor(Color.customBlue)
-                        .padding(.horizontal, 20)
 
                 Group {
                     Text("от \(vm.data.minimalPrice) ₽ ")
@@ -50,8 +35,9 @@ struct HotelView: View {
                     Text(vm.data.priceFor)
                         .font(.reg_16)
                         .foregroundColor(Color.customLightGray)
-                }.padding(.horizontal, 20)
+                }
             }.padding(.vertical, 16)
+                .padding(.horizontal, 20)
                 .background(Color.white)
                 .cornerRadius(12)
             
@@ -59,7 +45,6 @@ struct HotelView: View {
                 Text("Об отеле")
                     .font(.med_22)
                     .foregroundColor(.black)
-                    .padding(.horizontal, 20)
                 
 //                ForEach(vm.data.about.peculiarities, id: \.self) { i in
 //                    Text(i)
@@ -74,7 +59,6 @@ struct HotelView: View {
                 Text(vm.data.about.description)
                     .font(.reg_16)
                     .foregroundColor(.black.opacity(0.9))
-                    .padding(.horizontal, 20)
 
                 VStack(spacing: 0) {
                     HotelInfoItemView(data: .commodity)
@@ -92,44 +76,30 @@ struct HotelView: View {
                     HotelInfoItemView(data: .excluded)
                 }.background(Color.customWhite)
                     .cornerRadius(15)
-                    .padding(.horizontal, 20)
                 
             }.padding(.vertical, 16)
+                .padding(.horizontal, 20)
                 .background(Color.white)
                 .cornerRadius(12)
 
-        }.navigationTitle("Otel")
+            Spacer(minLength: 20)
+            
+        }.navigationTitle("Отель")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .bottomBar) {
-                    Button {
-                        
-                    } label: {
-                        Text("К выбору номера")
-                            .frame(maxWidth: .infinity, minHeight: 48)
-                            .foregroundColor(.white)
-                            .font(.med_16)
-                            .background(Color.customBlue)
-                            .cornerRadius(15)
-                    }
-                }//.frame(maxWidth: .infinity)
-            }
-
-            .background(Color.bgGray)
-//            .toolbar(.automatic, for: .bottomBar) {
-//                ToolbarItem {
-//                    Button {
-//                        
-//                    } label: {
-//                        Text("К выбору номера")
-//                            .frame(maxWidth: .infinity, minHeight: 48)
-//                            .foregroundColor(.white)
-//                            .font(.med_16)
-//                            .background(Color.customBlue)
-//                            .cornerRadius(15)
-//                    }
-//                }
-//            }
+                    Text("К выбору номера")
+                        .frame(maxWidth: .infinity, minHeight: 48)
+                        .background(Color.customBlue)
+                        .foregroundColor(.white)
+                        .font(.med_16)
+                        .cornerRadius(15)
+                        .padding(.top, 12)
+                        .onTapGesture {
+                            coordinator.navigateTo(.room(name: vm.data.name))
+                        }
+                }
+            }.background(Color.bgGray)
     }
 }
 

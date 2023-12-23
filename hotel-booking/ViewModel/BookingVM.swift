@@ -8,5 +8,6 @@
 import Foundation
 
 class BookingVM: ObservableObject {
-    
+    @Published var data: Booking = Booking.example
+
 }

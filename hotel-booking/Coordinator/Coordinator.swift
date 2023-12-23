@@ -11,7 +11,7 @@ class Coordinator: ObservableObject {
     
     enum Page: Hashable {
         case hotel
-        case room
+        case room(name: String)
         case booking
         case payment
     }
@@ -23,8 +23,9 @@ class Coordinator: ObservableObject {
         switch page {
         case .hotel:
             HotelView()
-        case .room:
+        case .room(let name):
             RoomView()
+                .navigationTitle(name)
         case .booking:
             BookingView()
         case .payment:

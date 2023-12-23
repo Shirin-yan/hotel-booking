@@ -9,12 +9,49 @@ import SwiftUI
 
 struct BookingView: View {
     @EnvironmentObject var coordinator: Coordinator
+    @StateObject var vm = BookingVM()
 
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView {
+            LazyVStack(alignment: .leading, spacing: 8) {
+
+                RatingView(rating: vm.data.rating, ratingName: vm.data.ratingName)
+                
+                Text(vm.data.hotelName)
+                    .font(.med_22)
+                    .foregroundStyle(Color.black)
+
+                Text(vm.data.hotelAddress)
+                    .font(.med_14)
+                    .foregroundColor(Color.customBlue)
+            }.padding(.horizontal, 20)
+                .padding(.vertical, 16)
+                .background(Color.white)
+                .cornerRadius(15)
+            
+            BookingInfoView(data: vm.data)
+            
+            
+        }.navigationTitle("Бронирование")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .bottomBar) {
+                    Text("Оплатить \(vm.data.totalPrice) ₽")
+                        .frame(maxWidth: .infinity, minHeight: 48)
+                        .foregroundColor(.white)
+                        .font(.med_16)
+                        .background(Color.customBlue)
+                        .cornerRadius(15)
+                        .onTapGesture {
+                            coordinator.navigateTo(.payment)
+                        }
+                }
+            }.background(Color.bgGray)
     }
 }
 
 #Preview {
-    BookingView()
+    NavigationView {
+        BookingView()
+    }
 }

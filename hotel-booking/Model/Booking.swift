@@ -24,6 +24,10 @@ struct Booking: Codable {
     let fuelCharge: Int
     let serviceCharge: Int
 
+    var totalPrice: Int {
+        return tourPrice+fuelCharge+serviceCharge
+    }
+    
     enum CodingKeys: String, CodingKey {
         case id
         case hotelName = "hotel_name"

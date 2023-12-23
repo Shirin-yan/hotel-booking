@@ -12,13 +12,13 @@ struct RoomView: View {
     @StateObject var vm = RoomVM()
 
     var body: some View {
-        List {
-            ForEach(vm.data) { i in
-                RoomItemView(data: i)
-                    .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
-            }.listRowSeparator(.hidden)
-                .listRowBackground(Color.clear)
-        }
+        ScrollView {
+            LazyVStack {
+                ForEach(vm.data) { i in
+                    RoomItemView(data: i)
+                }
+            }.padding(.vertical, 8)
+        }.background(Color.bgGray)
     }
 }
 

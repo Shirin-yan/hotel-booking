@@ -8,11 +8,27 @@
 import SwiftUI
 
 struct BookingInfoItemView: View {
+    var title: String
+    var value: String
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack(alignment: .top) {
+            Text(title)
+                .foregroundColor(.customLightGray)
+                .font(.reg_16)
+                .frame(maxWidth: UIScreen.main.bounds.width*0.33, alignment: .leading)
+                .multilineTextAlignment(.leading)
+            
+            Text(value)
+                .foregroundColor(.black)
+                .font(.reg_16)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .multilineTextAlignment(.leading)
+        }.padding(.horizontal, 16)
+            .padding(.vertical, 8)
     }
 }
 
 #Preview {
-    BookingInfoItemView()
+    BookingInfoItemView(title: "title", value: "value")
 }
