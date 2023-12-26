@@ -8,17 +8,21 @@
 import SwiftUI
 
 struct TouristInfoView: View {
-    @State var isCollapsed = false
-    @State var name: String = ""
-    @State var surname: String = ""
-    @State var nationality: String = ""
-    @State var passportNo: String = ""
-    @State var birthday: String = ""
+    @State var isCollapsed = true
+    @State var showDatePicker = false
+    @State var order: Int
+    @State var data: TouristInfo
     
+    var dateFormatter: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd.MM.yyyy"
+        return formatter
+    }
+
     var body: some View {
         VStack {
             HStack {
-                Text("Tурист # 1")
+                Text("Tурист # \(order)")
                     .foregroundColor(.black)
                     .font(.med_22)
                     .frame(maxWidth:.infinity, alignment: .leading)
@@ -29,40 +33,44 @@ struct TouristInfoView: View {
                     .frame(width: 32, height: 32, alignment: .center)
                     .background(Color.customBlue.opacity(0.1))
                     .cornerRadius(6)
-            }.onTapGesture {
+            }.contentShape(Rectangle())
+                .onTapGesture {
                 withAnimation(Animation.bouncy(duration: 0.3) ) {
                     isCollapsed.toggle()
                 }
             }
             
             if !isCollapsed {
-                TextFieldWrapper(title: "Имя", text: name) {
-                    TextField(text: $name) {
+                TextFieldWrapper(title: "Имя", text: data.name) {
+                    TextField(text: $data.name) {
                         Text("Имя")
                             .foregroundColor(.customLightGray)
                     }.font(.reg_16)
                 }
                 
-                TextFieldWrapper(title: "Фамилия", text: surname) {
-                    TextField(text: $surname) {
+                TextFieldWrapper(title: "Фамилия", text: data.surname) {
+                    TextField(text: $data.surname) {
                         Text("Фамилия")
                             .foregroundColor(.customLightGray)
                     }.font(.reg_16)
                 }
                 
-                TextFieldWrapper(title: "Дата рождения", text: birthday) {
-//                    TextField("Дата рождения", value: $birthday, format: .iso8601)
+                TextFieldWrapper(title: "Дата рождения", text: data.bithday) {
+                    TextField(text: $data.bithday) {
+                        Text("Дата рождения")
+                            .foregroundColor(.customLightGray)
+                    }.font(.reg_16)
                 }
                 
-                TextFieldWrapper(title: "Гражданство", text: nationality) {
-                    TextField(text: $nationality) {
+                TextFieldWrapper(title: "Гражданство", text: data.nationality) {
+                    TextField(text: $data.nationality) {
                         Text("Гражданство")
                             .foregroundColor(.customLightGray)
                     }.font(.reg_16)
                 }
                 
-                TextFieldWrapper(title: "Номер загранпаспорта", text: passportNo) {
-                    TextField(text: $passportNo) {
+                TextFieldWrapper(title: "Номер загранпаспорта", text: data.passport) {
+                    TextField(text: $data.passport) {
                         Text("Номер загранпаспорта")
                             .foregroundColor(.customLightGray)
                     }.font(.reg_16)
@@ -76,6 +84,6 @@ struct TouristInfoView: View {
 }
 
 #Preview {
-    TouristInfoView()
+    TouristInfoView(order: 1, data: TouristInfo())
         .background(Color.red)
 }

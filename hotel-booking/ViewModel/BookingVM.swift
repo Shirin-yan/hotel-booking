@@ -10,4 +10,7 @@ import Foundation
 class BookingVM: ObservableObject {
     @Published var data: Booking = Booking.example
 
+    @Published var phone = ""
+    @Published var mail = ""
+    @Published var touristInfo: [TouristInfo] = [TouristInfo()]
 }

@@ -31,8 +31,14 @@ struct BookingView: View {
             
             BookingInfoView(data: vm.data)
             
+            BuyerInfoView(phone: $vm.phone, email: $vm.mail)
+            
+            ForEach(vm.touristInfo.enumeratedArray(), id: \.offset) { ind, i in
+                TouristInfoView(order: ind+1, data: i)
+            }
+            
             Button {
-                
+                vm.touristInfo.append(TouristInfo())
             } label: {
                 AddTouristView()
             }
