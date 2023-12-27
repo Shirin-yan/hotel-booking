@@ -12,6 +12,7 @@
 		C02798342B3BF433003C7F43 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02798332B3BF433003C7F43 /* View.swift */; };
 		C02798362B3BFB97003C7F43 /* MaskedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02798352B3BFB97003C7F43 /* MaskedTextField.swift */; };
 		C02798382B3C14A5003C7F43 /* WrappingHStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02798372B3C14A5003C7F43 /* WrappingHStack.swift */; };
+		C027983A2B3CABD2003C7F43 /* sf-pro-display-semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C02798392B3CABD2003C7F43 /* sf-pro-display-semibold.ttf */; };
 		C0B418832B3C442500A419ED /* HotelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B418822B3C442500A419ED /* HotelView.swift */; };
 		C0B425472B32C14E00359DA4 /* tourBookingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B425462B32C14E00359DA4 /* tourBookingApp.swift */; };
 		C0B4254B2B32C14F00359DA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0B4254A2B32C14F00359DA4 /* Assets.xcassets */; };
@@ -55,6 +56,7 @@
 		C02798332B3BF433003C7F43 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		C02798352B3BFB97003C7F43 /* MaskedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskedTextField.swift; sourceTree = "<group>"; };
 		C02798372B3C14A5003C7F43 /* WrappingHStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrappingHStack.swift; sourceTree = "<group>"; };
+		C02798392B3CABD2003C7F43 /* sf-pro-display-semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sf-pro-display-semibold.ttf"; sourceTree = "<group>"; };
 		C0B418822B3C442500A419ED /* HotelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotelView.swift; sourceTree = "<group>"; };
 		C0B425432B32C14E00359DA4 /* hotel-booking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hotel-booking.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0B425462B32C14E00359DA4 /* tourBookingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tourBookingApp.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				C0B4257D2B34075D00359DA4 /* sf-pro-display-bold.otf */,
 				C0B4257F2B34076900359DA4 /* sf-pro-display-medium.otf */,
 				C0B425802B34076900359DA4 /* sf-pro-display-regular.otf */,
+				C02798392B3CABD2003C7F43 /* sf-pro-display-semibold.ttf */,
 				C0B4254C2B32C14F00359DA4 /* Preview Content */,
 			);
 			path = "hotel-booking";
@@ -302,6 +305,7 @@
 				C0B425812B3407D000359DA4 /* sf-pro-display-medium.otf in Resources */,
 				C0B4254E2B32C14F00359DA4 /* Preview Assets.xcassets in Resources */,
 				C0B425822B3407D300359DA4 /* sf-pro-display-regular.otf in Resources */,
+				C027983A2B3CABD2003C7F43 /* sf-pro-display-semibold.ttf in Resources */,
 				C0B4257E2B34076000359DA4 /* sf-pro-display-bold.otf in Resources */,
 				C0B4254B2B32C14F00359DA4 /* Assets.xcassets in Resources */,
 			);

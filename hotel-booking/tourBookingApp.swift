@@ -13,7 +13,7 @@ struct tourBookingApp: App {
         WindowGroup {
             CoordinatorView {
                 HotelView()
-            }
+            }.preferredColorScheme(.light)
         }
     }
 }

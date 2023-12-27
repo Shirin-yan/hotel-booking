@@ -25,7 +25,7 @@ enum Endpoint {
             components.path = "/v3/8b532701-709e-4194-a41c-1a903af00195"
 
         case .booking:
-            components.path = "//v3/63866c74-d593-432c-af8e-f279d1a8d2ff"
+            components.path = "/v3/63866c74-d593-432c-af8e-f279d1a8d2ff"
         }
         
         return components.url?.absoluteString ?? ""

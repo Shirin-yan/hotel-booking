@@ -19,11 +19,11 @@ class RoomVM: ObservableObject {
         guard let url = URL(string: Endpoint.room.url) else { return }
         
         subscription = NetworkManger.download(url: url)
-            .decode(type: [Room].self, decoder: JSONDecoder())
+            .decode(type: Room.Response.self, decoder: JSONDecoder())
             .sink(receiveCompletion: NetworkManger.handleCompletion, receiveValue: { [weak self] data in
                 guard let self = self else { return }
                 self.inProgress = false
-                self.data = data
+                self.data = data.rooms
                 self.subscription?.cancel()
             })
     }
