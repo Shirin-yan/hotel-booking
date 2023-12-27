@@ -46,15 +46,17 @@ struct HotelView: View {
                     .font(.med_22)
                     .foregroundColor(.black)
                 
-//                ForEach(vm.data.about.peculiarities, id: \.self) { i in
-//                    Text(i)
-//                        .foregroundColor(.customLightGray)
-//                        .font(.med_16)
-//                        .padding(.horizontal, 10)
-//                        .padding(.vertical, 5)
-//                        .background(Color.bgGray)
-//                        .cornerRadius(5)
-//                }
+                WrappingHStack(horizontalSpacing: 8, verticalSpacing: 8) {
+                    ForEach(vm.data.about.peculiarities, id: \.self) { i in
+                        Text(i)
+                            .foregroundColor(.customLightGray)
+                            .font(.med_16)
+                            .padding(.horizontal, 10)
+                            .padding(.vertical, 5)
+                            .background(Color.bgGray)
+                            .cornerRadius(5)
+                    }
+                }
                 
                 Text(vm.data.about.description)
                     .font(.reg_16)

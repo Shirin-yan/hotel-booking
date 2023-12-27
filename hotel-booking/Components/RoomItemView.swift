@@ -20,6 +20,18 @@ struct RoomItemView: View {
                 .foregroundStyle(Color.black)
                 .font(.med_22)
             
+            WrappingHStack(horizontalSpacing: 8, verticalSpacing: 8) {
+                ForEach(data.peculiarities, id: \.self) { i in
+                    Text(i)
+                        .foregroundColor(.customLightGray)
+                        .font(.med_16)
+                        .padding(.horizontal, 10)
+                        .padding(.vertical, 5)
+                        .background(Color.bgGray)
+                        .cornerRadius(5)
+                }
+            }
+
             HStack(spacing: 4) {
                 Text("Подробнее о номере")
                     .font(.med_16)
