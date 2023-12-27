@@ -12,13 +12,27 @@ struct RoomView: View {
     @StateObject var vm = RoomVM()
 
     var body: some View {
-        ScrollView {
-            LazyVStack {
-                ForEach(vm.data) { i in
-                    RoomItemView(data: i)
+        VStack {
+            if !vm.data.isEmpty  {
+                ScrollView {
+                    LazyVStack {
+                        ForEach(vm.data) { i in
+                            RoomItemView(data: i)
+                        }
+                    }.padding(.vertical, 8)
                 }
-            }.padding(.vertical, 8)
+            } else if vm.inProgress {
+                ProgressView()
+                    .progressViewStyle(CircularProgressViewStyle())
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+            } else {
+                Text("Networ error")
+                    .foregroundColor(.black)
+                    .font(.med_22)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+            }
         }.background(Color.bgGray)
+            .onAppear(perform: vm.getData)
     }
 }
 

@@ -27,6 +27,16 @@ class NetworkManger {
         return output.data
     }
     
+    static func handleCompletion(completion: Subscribers.Completion<Error>){
+        switch completion {
+        case .finished:
+            break
+            
+        case .failure(let error):
+            debugPrint(error)
+        }
+    }
+    
     enum NetworkError: LocalizedError {
         case badURLResponse(url: URL)
         case unknown

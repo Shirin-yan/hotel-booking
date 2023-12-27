@@ -8,7 +8,7 @@
 import Foundation
 
 enum FormattingPatterns: String {
-    case mobile = "+7 (xxx) xxx-xx-xx"
+    case mobile = "+x (yxx) xxx-xx-xx"
     case date = "xx.xx.xxxx"
 }
 
