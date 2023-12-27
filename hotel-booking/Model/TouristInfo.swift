@@ -15,6 +15,15 @@ struct TouristInfo {
     var passport: String
     var passportExpireDate: String
     
+    var isValidData: Bool {
+        return !(name.isEmpty
+                || surname.isEmpty
+                || bithday.isEmpty
+                || nationality.isEmpty
+                || passport.isEmpty
+                || passportExpireDate.isEmpty)
+    }
+    
     init(){
         self.name = ""
         self.surname = ""
